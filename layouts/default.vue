@@ -1,24 +1,26 @@
-<template>
-    <Header></Header>
-    <div>
-        <h1>Menu</h1>
-        <NuxtLink :to="`/user/${id}`">Users</NuxtLink>
-        <NuxtLink to="/">Home</NuxtLink>
-        <nuxt-link to="user">User</nuxt-link>
-        <NuxtPage />
-    </div>
-    <Footer></Footer>
-</template>
-
 <script setup lang="ts">
-import { ref } from 'vue'
-import Footer from '~/components/Footer.vue';
-import Header from '~/components/Header.vue';
-const id = ref(12)
+import { CContainer } from '@coreui/vue'
+import AppFooter from '~/components/AppFooter.vue'
+import AppHeader from '~/components/AppHeader.vue'
+import AppSidebar from '~/components/AppSidebar.vue'
+
 </script>
 
-<style scoped>
-.router-link-exact-active {
-    color: red
-}
-</style>
+<template>
+  <App>
+    <div>
+      <AppSidebar />
+      <div class="wrapper d-flex flex-column min-vh-100">
+        <AppHeader />
+        <div class="body flex-grow-1">
+          <CContainer
+              :fluid="true"
+          >
+            <NuxtPage />
+          </CContainer>
+        </div>
+        <AppFooter />
+      </div>
+    </div>
+  </App>
+</template>

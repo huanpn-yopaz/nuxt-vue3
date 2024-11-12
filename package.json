@@ -10,6 +10,10 @@
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
+    "@coreui/icons": "^3.0.1",
+    "@coreui/icons-vue": "^2.2.0",
+    "@coreui/vue": "5.0.0-rc.3",
+    "@pinia/nuxt": "^0.7.0",
     "@supabase/supabase-js": "^2.46.1",
     "nuxt": "^3.14.159",
     "vue": "latest",

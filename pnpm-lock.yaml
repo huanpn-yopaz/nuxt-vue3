@@ -5,6 +5,18 @@ settings:
   excludeLinksFromLockfile: false
 
 dependencies:
+  '@coreui/icons':
+    specifier: ^3.0.1
+    version: 3.0.1
+  '@coreui/icons-vue':
+    specifier: ^2.2.0
+    version: 2.2.0(vue@3.5.12)
+  '@coreui/vue':
+    specifier: 5.0.0-rc.3
+    version: 5.0.0-rc.3(vue@3.5.12)
+  '@pinia/nuxt':
+    specifier: ^0.7.0
+    version: 0.7.0(typescript@5.6.3)(vue@3.5.12)
   '@supabase/supabase-js':
     specifier: ^2.46.1
     version: 2.46.1
@@ -338,6 +350,36 @@ packages:
     engines: {node: '>=16.13'}
     dependencies:
       mime: 3.0.0
+    dev: false
+
+  /@coreui/coreui@5.2.0(@popperjs/core@2.11.8):
+    resolution: {integrity: sha512-DZLWzPIZP3KTNgcaRXny/7lcQm0rDMrheu3VsWpgbln5rUuJwxdopwhTSnOryVyCwjlDbs3Z8ZfIzOeBXNC4GA==}
+    peerDependencies:
+      '@popperjs/core': ^2.11.8
+    dependencies:
+      '@popperjs/core': 2.11.8
+    dev: false
+
+  /@coreui/icons-vue@2.2.0(vue@3.5.12):
+    resolution: {integrity: sha512-FUQw/4/OprUkfSgtraJfdJqXIRj3Ey18nm5LQrfsJNMYTLjU+P5QzpljiSu9F3P/YPlX/sTWY/6ok71SmODtHw==}
+    peerDependencies:
+      vue: ^3.2.20
+    dependencies:
+      vue: 3.5.12(typescript@5.6.3)
+    dev: false
+
+  /@coreui/icons@3.0.1:
+    resolution: {integrity: sha512-u9UKEcRMyY9pa4jUoLij8pAR03g5g6TLWV33/Mx2ix8sffyi0eO4fLV8DSTQljDCw938zt7KYog5cVKEAJUxxg==}
+    dev: false
+
+  /@coreui/vue@5.0.0-rc.3(vue@3.5.12):
+    resolution: {integrity: sha512-4NWu6MjD6TqVbP6+9H8uXcxfZFRmovFMbnbo+NDv2NOqHBhUCxb7j03+Dl5qKv/Bgzlr24zdZ/XYxukGWNxirw==}
+    peerDependencies:
+      vue: ^3.2.21
+    dependencies:
+      '@coreui/coreui': 5.2.0(@popperjs/core@2.11.8)
+      '@popperjs/core': 2.11.8
+      vue: 3.5.12(typescript@5.6.3)
     dev: false
 
   /@esbuild/aix-ppc64@0.21.5:
@@ -1277,6 +1319,21 @@ packages:
       '@parcel/watcher-win32-x64': 2.5.0
     dev: false
 
+  /@pinia/nuxt@0.7.0(typescript@5.6.3)(vue@3.5.12):
+    resolution: {integrity: sha512-IAKRl7mQCrFKQtD8Z6EzOz5bQ/px0FdeyaB+70A3igkFzHzKVJVblLCjFwXPBC/IO0EwHuMRk/SMgwkUn82jwg==}
+    dependencies:
+      '@nuxt/kit': 3.14.159(magicast@0.3.5)
+      pinia: 2.2.6(typescript@5.6.3)(vue@3.5.12)
+    transitivePeerDependencies:
+      - '@vue/composition-api'
+      - magicast
+      - rollup
+      - supports-color
+      - typescript
+      - vue
+      - webpack-sources
+    dev: false
+
   /@pkgjs/parseargs@0.11.0:
     resolution: {integrity: sha512-+1VkjdD0QBLPodGrJUeqarH8VAIvQODIbwh9XpP5Syisf7YoQgsJKPNFoqqLQlu+VQ/tVSshMR6loPMn8U+dPg==}
     engines: {node: '>=14'}
@@ -1286,6 +1343,10 @@ packages:
 
   /@polka/url@1.0.0-next.28:
     resolution: {integrity: sha512-8LduaNlMZGwdZ6qWrKlfa+2M4gahzFkprZiAt2TF8uS0qQgBizKXpXURqvTJ4WtmupWxaLqjRb2UCTe72mu+Aw==}
+    dev: false
+
+  /@popperjs/core@2.11.8:
+    resolution: {integrity: sha512-P1st0aksCrn9sGZhp8GMYwBnQsbvAWsZAX44oXNNvLHGqAOcoVxmjZiohstwQ7SqKnbR47akdNi+uleWD8+g6A==}
     dev: false
 
   /@redocly/ajv@8.11.2:
@@ -4314,6 +4375,24 @@ packages:
     engines: {node: '>=12'}
     dev: false
 
+  /pinia@2.2.6(typescript@5.6.3)(vue@3.5.12):
+    resolution: {integrity: sha512-vIsR8JkDN5Ga2vAxqOE2cJj4VtsHnzpR1Fz30kClxlh0yCHfec6uoMeM3e/ddqmwFUejK3NlrcQa/shnpyT4hA==}
+    peerDependencies:
+      '@vue/composition-api': ^1.4.0
+      typescript: '>=4.4.4'
+      vue: ^2.6.14 || ^3.5.11
+    peerDependenciesMeta:
+      '@vue/composition-api':
+        optional: true
+      typescript:
+        optional: true
+    dependencies:
+      '@vue/devtools-api': 6.6.4
+      typescript: 5.6.3
+      vue: 3.5.12(typescript@5.6.3)
+      vue-demi: 0.14.10(vue@3.5.12)
+    dev: false
+
   /pkg-types@1.2.1:
     resolution: {integrity: sha512-sQoqa8alT3nHjGuTjuKgOnvjo4cljkufdtLMnO2LBP/wRwuDlo1tkaEdMxCRhyGRPacv/ztlZgDPm2b7FAmEvw==}
     dependencies:
@@ -5680,6 +5759,21 @@ packages:
     resolution: {integrity: sha512-+qALLI5cQncuetYOXp4yScwYvqh8c6SMXee3B+M7oTZxOgtESP0l4j/fXdEJoZ+EdMxkGWIj+aSEyjXkOdmd7g==}
     dependencies:
       ufo: 1.5.4
+    dev: false
+
+  /vue-demi@0.14.10(vue@3.5.12):
+    resolution: {integrity: sha512-nMZBOwuzabUO0nLgIcc6rycZEebF6eeUfaiQx9+WSk8e29IbLvPU9feI6tqW4kTo3hvoYAJkMh8n8D0fuISphg==}
+    engines: {node: '>=12'}
+    hasBin: true
+    requiresBuild: true
+    peerDependencies:
+      '@vue/composition-api': ^1.0.0-rc.1
+      vue: ^3.0.0-0 || ^2.6.0
+    peerDependenciesMeta:
+      '@vue/composition-api':
+        optional: true
+    dependencies:
+      vue: 3.5.12(typescript@5.6.3)
     dev: false
 
   /vue-devtools-stub@0.1.0:
